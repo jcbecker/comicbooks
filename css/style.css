@@ -1,0 +1,134 @@
+@charset = "utf-8";
+body{
+    background:#eaeaea;
+    padding:10px;
+    font-family:Arial;
+    font-size:18px;
+}
+label{
+    display:block;
+    font-weight:bold;
+}
+input{
+    font-size:16px;
+    padding:5px;
+}
+div.principal{
+    background-color:#FFF;
+    width:60%;
+    margin:0px auto;
+    padding:0px 10px 10px 10px;
+    border:1px solid #e3e3e3;
+    border-radius: 5px;
+}
+
+/*seções da página(containers)*/
+/*
+body{
+    background-image: url("../figure/background2.jpg");
+}
+
+div#interface{
+    font-family:Arial, sans-serif;
+    width:95%;
+    margin:0px auto 0px auto;
+    padding:0px 10px 10px 10px;
+}
+
+header#mainheader{
+    background-color:rgba(100,100,100,.3);
+    border-bottom:1px #606060 solid;
+}
+
+header#mainheader h1{
+    font-family:Arial,sans-serif;
+}
+section#mainbody{
+    background-color:rgba(100,100,100,.3);
+    padding:15px;
+    display:block;
+}
+section#mainbody h2{
+    
+    
+}
+
+aside{
+    display:none;
+}
+footer{
+    border-top:1px solid black;
+    background-color:rgba(100,100,100,.3);
+    clear:both;
+    padding:10px 0px 10px 0px;
+}
+footer p{
+    text-align:center;
+    
+}
+*/
+/*formatação do menu*/
+/*
+nav#menu{
+    display:block;
+    width:600px;
+    top:0px;
+    right:0px;
+}
+nav#menu ul{
+    list-style:none;
+    top:0px;
+    right:0px;
+    background-color:rgb(35,35,35);
+    padding:5px;
+}
+nav#menu li{
+    display:inline-block;
+    padding:3px;
+    margin:1px;    
+}
+nav#menu a{
+    color:rgb(180,180,180);
+    text-decoration:none;
+    padding:10px;
+}
+nav#menu a:hover{
+    color:rgb(255,255,255);
+}
+nav#menu h1{
+    display:none;
+}
+*/
+/*formatação de conteudo para serem postados*/
+/*
+article{
+    width:70%;
+    background-color:rgb(180,180,180);
+    border-bottom:1px solid black;
+    padding:10px;
+    margin:0px 20px 0px 20px;
+}
+
+figure.figtopost{
+    position:relative;
+    box-shadow: 1px 1px 4px black;
+}
+figure.figtopost img{
+    width: 100%;
+    height: 100%;
+    
+}
+figure.figtopost figcaption{
+    opacity:0;
+    position: absolute;
+    bottom:0px;
+    background-color: rgba(0,0,0,.6);
+    color:white;
+    width: 100%;
+    padding:10px;
+    box-sizing:border-box;
+}
+figure.figtopost:hover figcaption{
+    opacity:1;
+}
+*/
