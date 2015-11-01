@@ -63,16 +63,16 @@ if (count($erro)>0){
 <form action="index.php?p=cadastrar" method="POST">
     
     <label for="nome">Nome</label>
-    <input name="nome" value="" required type="text">
+    <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
     
-    <label for="id">ID</label>
-    <input name="id" value="" required type="text">
+    <label for="id">ID, login</label>
+    <input name="id" value="<?php echo $_SESSION[id];?>" required type="text">6~30 caracteres
     
     <label for="email">E-mail</label>
-    <input name="email" value="" required type="email">
+    <input name="email" value="<?php echo $_SESSION[email];?>" required type="email">
     
     <label for="senha">Senha</label>
-    <input name="senha" value="" required type="password">
+    <input name="senha" value="" required type="password">8~16 caracteres
     
     <label for="rsenha">Repita a Senha</label>
     <input name="rsenha" value="" required type="password">
