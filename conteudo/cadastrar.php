@@ -50,7 +50,6 @@ if (isset($_POST['confirmar'])){
 
 ?>
 
-
 <h1>Cadastrar Usuário</h1>
 <?php 
 if (count($erro)>0){

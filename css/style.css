@@ -1,6 +1,6 @@
 @charset = "utf-8";
 body{
-    background:#eaeaea;
+    background-image: url("../figures/url.jpeg");
     padding:10px;
     font-family:Arial;
     font-size:18px;
@@ -13,9 +13,12 @@ input{
     font-size:16px;
     padding:5px;
 }
-div.principal{
+
+
+div#main{/*main é a classe princiál que engloba todas as outras*/
     background-color:#FFF;
-    width:60%;
+    
+    width:70%;
     margin:0px auto;
     padding:0px 10px 10px 10px;
     border:1px solid #e3e3e3;
@@ -24,9 +27,6 @@ div.principal{
 
 /*seções da página(containers)*/
 /*
-body{
-    background-image: url("../figure/background2.jpg");
-}
 
 div#interface{
     font-family:Arial, sans-serif;
@@ -56,6 +56,7 @@ section#mainbody h2{
 aside{
     display:none;
 }
+*/
 footer{
     border-top:1px solid black;
     background-color:rgba(100,100,100,.3);
@@ -66,7 +67,6 @@ footer p{
     text-align:center;
     
 }
-*/
 /*formatação do menu*/
 /*
 nav#menu{
