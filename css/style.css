@@ -1,13 +1,78 @@
 @charset = "utf-8";
+
+@font-face{
+	font-family: accid;
+	src: url("../fontes/accidental_presiden/accid___.ttf");
+}
 body{
     background-image: url("../figures/url.jpeg");
-    padding:10px;
-    font-family:Arial;
+    padding:0px;
+    font-family:Arial;/*devine arial como fonte para tudo mas certas coisas não vão ser arial(eu acho por hora)*/
     font-size:18px;
 }
+div#main{/*main é a classe princiál que engloba todas as outras*/
+    background-color:rgba(250,250,250,0);
+    width:70%;
+    margin:0px auto;
+    padding:0px 0px 0px 0px;
+    border:1px solid #e3e3e3;/*a borda vai ser retirada, está agora para ter noção de espaocupado*/
+}
+
+header{
+    background-color:rgb(255,255,255);
+    margin:-40px 0px 0px 0px;/*esse menos -40 ta bem porco, mas foi a melhor maneira q encontrei*/
+    padding: 0px;
+}
+header h1{
+    font-weight:normal;
+    font-family:accid;
+    text-align:center;
+    letter-spacing:15px;
+    font-size:70px;
+}
+
+nav#menutop{
+    display:block;
+    top:0px;
+    right:0px;
+}
+nav#menutop ul{
+    list-style:none;
+    top:0px;
+    right:0px;
+    background-color:rgb(35,35,35);
+    padding:5px;
+}
+nav#menutop li{
+    display:inline-block;
+    padding:3px;
+    margin:1px;    
+}
+nav#menutop a{
+    color:rgb(180,180,180);
+    text-decoration:none;
+    padding:10px;
+}
+nav#menutop a:hover{
+    color:rgb(255,255,255);
+}
+nav#menutop h1{
+    display:none;
+}
+
+footer{
+    border-top:1px solid black;
+    background-color:rgba(100,100,100,.3);
+    clear:both;
+    padding:10px 0px 10px 0px;
+}
+footer p{
+    text-align:center;
+}
+
+
 label{
     display:block;
-    font-weight:bold;
 }
 input{
     font-size:16px;
@@ -15,19 +80,7 @@ input{
 }
 
 
-div#main{/*main é a classe princiál que engloba todas as outras*/
-    background-color:#FFF;
-    
-    width:70%;
-    margin:0px auto;
-    padding:0px 10px 10px 10px;
-    border:1px solid #e3e3e3;
-    border-radius: 5px;
-}
-
-/*seções da página(containers)*/
 /*
-
 div#interface{
     font-family:Arial, sans-serif;
     width:95%;
@@ -35,14 +88,6 @@ div#interface{
     padding:0px 10px 10px 10px;
 }
 
-header#mainheader{
-    background-color:rgba(100,100,100,.3);
-    border-bottom:1px #606060 solid;
-}
-
-header#mainheader h1{
-    font-family:Arial,sans-serif;
-}
 section#mainbody{
     background-color:rgba(100,100,100,.3);
     padding:15px;
@@ -57,47 +102,10 @@ aside{
     display:none;
 }
 */
-footer{
-    border-top:1px solid black;
-    background-color:rgba(100,100,100,.3);
-    clear:both;
-    padding:10px 0px 10px 0px;
-}
-footer p{
-    text-align:center;
-    
-}
+
 /*formatação do menu*/
 /*
-nav#menu{
-    display:block;
-    width:600px;
-    top:0px;
-    right:0px;
-}
-nav#menu ul{
-    list-style:none;
-    top:0px;
-    right:0px;
-    background-color:rgb(35,35,35);
-    padding:5px;
-}
-nav#menu li{
-    display:inline-block;
-    padding:3px;
-    margin:1px;    
-}
-nav#menu a{
-    color:rgb(180,180,180);
-    text-decoration:none;
-    padding:10px;
-}
-nav#menu a:hover{
-    color:rgb(255,255,255);
-}
-nav#menu h1{
-    display:none;
-}
+
 */
 /*formatação de conteudo para serem postados*/
 /*

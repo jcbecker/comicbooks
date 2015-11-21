@@ -17,6 +17,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 <body>
     <div id=main>
         <?php 
+        include "conteudo/header.php";
         include "conteudo/cadastrar.php";
         include "conteudo/footer.php";
         ?>
