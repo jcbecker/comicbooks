@@ -7,6 +7,9 @@ include ("config/conexao.php");
 $consulta = "SELECT * FROM user";
 $con = $mysqli->query($consulta) or die($mysqli->error);
 
+
+$texto="malu hayaçsodkçalsdkaçsldk";
+$meuconteudo="cadastrar.php";
 ?>
 <html>
 <head>
@@ -18,7 +21,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
     <div id=main>
         <?php 
         include "conteudo/header.php";
-        include "conteudo/cadastrar.php";
+        include "conteudo/content.php";
+        
         include "conteudo/footer.php";
         ?>
     </div>
