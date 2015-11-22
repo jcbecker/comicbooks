@@ -5,7 +5,7 @@ include ("config/conexao.php");//por algum motivo tenq incluir aqui, mesmo inclu
 ?>
 <html>
 <head>
-    <title>comicbooks | home</title>
+    <title>comicbooks | cadastro</title>
     <meta charset = "utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </script>
