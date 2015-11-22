@@ -4,8 +4,23 @@
 	font-family: accid;
 	src: url("../fontes/accidental_presiden/accid___.ttf");
 }
+
+
+.fixed {
+    position:fixed;
+    z-index:999;
+    left:0%;
+    right: 0%;
+    top:20px;
+    overflow:hidden;
+    margin:0 auto;
+}
+
+.normal {position:relative;}
+.estavel {position: fixed;top:0;z-index:1;}
+
 body{
-    background-image: url("../figures/url.jpeg");
+    background-image: url("../figures/background.jpg");
     padding:0px;
     font-family:Arial;/*devine arial como fonte para tudo mas certas coisas não vão ser arial(eu acho por hora)*/
     font-size:18px;
@@ -16,17 +31,17 @@ div#main{/*main é a classe princiál que engloba todas as outras*/
     width:70%;
     margin:0 auto;
     padding:0px 0px 0px 0px;
-    border:1px solid #e3e3e3;/*a borda vai ser retirada, está agora para ter noção de espaocupado*/
+/*    border:1px solid #e3e3e3;/*a borda vai ser retirada, está agora para ter noção de espaocupado*/
 }
 
 header{
     background-color:rgb(255,255,255);
+    font-family:accid;
     margin:-40px 0px 0px 0px;/*esse menos -40 ta bem porco, mas foi a melhor maneira q encontrei*/
     padding: 0px;
 }
 header h1{
     font-weight:normal;
-    font-family:accid;
     text-align:center;
     letter-spacing:15px;
     font-size:70px;

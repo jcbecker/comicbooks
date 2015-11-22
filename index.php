@@ -16,11 +16,13 @@ $meuconteudo="cadastrar.php";
     <title>comicbooks | home</title>
     <meta charset = "utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</script>
 </head>
 <body>
-    <div id=main>
+    <div id="main">
         <?php 
         include "conteudo/header.php";
+        
         include "conteudo/content.php";
         
         include "conteudo/footer.php";
