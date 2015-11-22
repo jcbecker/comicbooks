@@ -21,11 +21,11 @@ $meuconteudo="cadastrar.php";
 <body>
     <div id="main">
         <?php 
-        include "conteudo/header.php";
+        include_once "conteudo/header.php";
         
-        include "conteudo/content.php";
+        include_once "conteudo/content.php";
         
-        include "conteudo/footer.php";
+        include_once "conteudo/footer.php";
         ?>
     </div>
 </body>
