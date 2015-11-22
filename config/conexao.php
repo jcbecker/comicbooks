@@ -14,7 +14,7 @@ $mysqli = new mysqli($host, $usuario, $senha, $db);
 if ($mysqli->connect_errno){
     echo "Falha na conexão: (".$mysqli->connect_errno.") ".$mysqli->connect_error;
 }
-
+unset($host,$usuario,$senha, $pass, $db);//só pra garantir excluir alguns dados
 
 
 //function dbclose (){

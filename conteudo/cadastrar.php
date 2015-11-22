@@ -11,11 +11,19 @@ if (isset($_POST['confirmar'])){
         
     }
     //validação
+    $atuallogin=$_SESSION['id'];//gambiarra para corrigir aspas triplas na consulta
+    $consulta = "SELECT id FROM user where id = '$atuallogin'";
+    $con = $mysqli->query($consulta) or die($mysqli->error);
+    $con = $con->fetch_array();
+    
     if (strlen($_SESSION['nome'])>70){
         $erro[] = "ERRO: Não pode ter mais de 70 carcteres no campo nome.";
     }
     if (strlen($_SESSION['id'])<6 || strlen($_SESSION['id'])>30){
         $erro[] = "ERRO: Seu nome de login deve ter entre 6 a 30 caracteres.";
+    }
+    if($con['id']==$atuallogin){
+        $erro[]="ERRO: Este login/id já existe, tente outro";
     }
     if (strlen($_SESSION['senha'])<8 || strlen($_SESSION['senha'])>16){
         $erro[] = "ERRO: A senha deve ter entre 8 a 16 caracteres.";
@@ -38,7 +46,7 @@ if (isset($_POST['confirmar'])){
         )";
         $confirma = $mysqli->query($sql_code) or die($mysqli->error);
         if ($confirma){//se a inserção funcionar vou excluir as variaveis
-            unset ($_SESSION['id'],$_SESSION['email'],$_SESSION['senha'],$_SESSION['nome']);
+            unset ($_SESSION['id'],$_SESSION['email'],$_SESSION['senha'],$_SESSION['nome'],$atuallogin,$consulta,$con);//mata tudo mesmo
             
         }else{
             $erro[] = "ERRO: Não foi possivel por os valores no banco de dados. ".$confirma;

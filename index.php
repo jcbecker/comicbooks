@@ -3,12 +3,10 @@
 <?php
 
 include ("config/conexao.php");
-//$mysqli = dbconnect ();
-$consulta = "SELECT * FROM user";
-$con = $mysqli->query($consulta) or die($mysqli->error);
 
 
-$texto="malu hayaçsodkçalsdkaçsldk";
+
+$texto="oi";
 $meuconteudo="cadastrar.php";
 ?>
 <html>
@@ -24,6 +22,7 @@ $meuconteudo="cadastrar.php";
         include_once "conteudo/header.php";
         
         include_once "conteudo/content.php";
+        
         
         include_once "conteudo/footer.php";
         ?>
