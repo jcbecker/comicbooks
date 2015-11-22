@@ -14,9 +14,6 @@
     width:70%;
 }
 
-.normal {position:relative;}
-.estavel {position: fixed;top:0;z-index:1;}
-
 body{
     background-image: url("../figures/background.jpg");
     padding:0px;

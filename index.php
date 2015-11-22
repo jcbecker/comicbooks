@@ -1,9 +1,5 @@
 <!doctype html>
 
-<?php
-include ("config/conexao.php");//por algum motivo tenq incluir aqui, mesmo incluindo no cadastrar.php
-$texto="oi";
-?>
 <html>
 <head>
     <title>comicbooks | home</title>
@@ -13,13 +9,9 @@ $texto="oi";
 </head>
 <body>
     <div id="main">
-        <?php 
-        include_once "conteudo/header.php";
-        
-        ?>
+        <?php include_once "conteudo/header.php"; ?>
         <div id="content">
             <!--aqui vai todo conteudo do planeta-->
-            <?php include "conteudo/cadastrar.php"; ?>
             <p>
                 There's a blackbird perched outside my window</br>
                 I hear him calling</br>
@@ -112,9 +104,7 @@ $texto="oi";
         </div>
         
         
-        <?php
-        include_once "conteudo/footer.php";
-        ?>
+        <?php include_once "conteudo/footer.php"; ?>
     </div>
 </body>
 </html>

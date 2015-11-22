@@ -67,7 +67,7 @@ if (count($erro)>0){
     echo "</div>";
 }
 ?>
-<form action="index.php?p=cadastrar" method="POST">
+<form action="cadastro.php?p=cadastrar" method="POST">
     
     <label for="nome">Nome</label>
     <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
