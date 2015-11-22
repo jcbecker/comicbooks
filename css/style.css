@@ -8,12 +8,10 @@
 
 .fixed {
     position:fixed;
-    z-index:999;
-    left:0%;
-    right: 0%;
     top:20px;
     overflow:hidden;
-    margin:0 auto;
+    margin: auto;
+    width:70%;
 }
 
 .normal {position:relative;}
