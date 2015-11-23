@@ -5,7 +5,6 @@
     <title>comicbooks | home</title>
     <meta charset = "utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-</script>
 </head>
 <body>
     <div id="main">
