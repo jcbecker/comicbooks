@@ -1,4 +1,3 @@
-<!doctype html>
 <?php
     
     include ("config/conexao.php");
@@ -13,7 +12,7 @@
             if (!isset($_SESSION)){
                 session_start();
             }
-            $_SESSION['nivel']=$con['nivel'];//ainda não foi testado
+            $_SESSION['nivel']=$con['nivel'];
             $_SESSION['user']=$login;
             $vflag=true;
         }else{
@@ -25,21 +24,8 @@
             header("Location:index.php");
         }
     }
-    
-    
-    
-    
-//    if (isset($entrar)) {
-//        $verifica = mysql_query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'") or die("erro ao selecionar");
-//        if (mysql_num_rows($verifica)<=0){
-//            echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.html';</script>";
-//            die();
-//        }else{
-//            setcookie("login",$login);
-//            header("Location:index.php");
-//        }
-//    }
 ?>
+<!doctype html>
 <html>
 <head>
     <title>comicbooks | Login</title>
