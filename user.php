@@ -2,9 +2,9 @@
 include_once "protect.php";
 protect();
 if(adminlogado()){
-    $conta="admin";
+    $conta="Admin";
 }else{
-    $conta="leitor";
+    $conta="Leitor";
 }
 $login=$_SESSION['user'];
 include ("config/conexao.php");
@@ -25,15 +25,16 @@ $con = $con->fetch_array();
     <div id="main">
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
-            <?php echo $conta."</br></br></br>"; ?>
-            <?php 
-            echo "email =".$con['email'].'<br>';
-            echo "nome =".$con['nome'].'<br>';
-            echo "id =".$con['id'].'<br>';
-            echo "nivel =".$con['nivel'].'<br>';
+            <h1>Minhas Informações</h1>
+            <table>
+            <caption>titulo tabela</caption>
+            <tr><td><?php echo $conta ?></td></tr>
+            <tr><td>Login</td><td><?php echo $con['id'] ?></td></tr>
+            <tr><td>Nome</td><td><?php echo $con['nome'] ?></td></tr>
+            <tr><td>Email</td><td><?php echo $con['email'] ?></td></tr>
             
+            </table>
             
-            ?>
             
         </div>
         
