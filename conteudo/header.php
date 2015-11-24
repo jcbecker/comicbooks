@@ -1,7 +1,10 @@
 <?php 
 $status=$_GET['status'];
 if ($status=='logout'){
-    setcookie("login");
+    if (!isset($_SESSION)){
+        session_start();
+    }
+    unset($_SESSION['user']);
 }
 
 ?>
@@ -29,7 +32,10 @@ $(function () {
         <a href="index.php"><li>Livros</li></a>
         <a href="index.php"><li>Noticias</li></a>
         <?php
-        if(isset($_COOKIE['login'])){
+        if (!isset($_SESSION)){
+            session_start();
+        }
+        if(isset($_SESSION['user'])){
             echo "<a href='?status=logout'><li>Sair</li></a>";
         }
         else{

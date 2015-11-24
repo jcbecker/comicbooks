@@ -10,13 +10,16 @@
     $con = $con->fetch_array();
     if (isset($_POST['entrar'])){
         if($con['id']==$login){
-            setcookie("login",$login);
+            if (!isset($_SESSION)){
+                session_start();
+            }
+            $_SESSION['user']=$login;
             $vflag=true;
         }else{
             echo "<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
             $vflag=false;
         }
-        unset ($_POST['senha'],$_POST['login'],$consulta,$con,$senha,$login);
+        unset ($_POST['senha'],$_POST['login'],$consulta,$con,$senha,$login);//mata tudo
         if($vflag){
             header("Location:index.php");
         }
