@@ -1,13 +1,4 @@
-<?php 
-$status=$_GET['status'];
-if ($status=='logout'){
-    if (!isset($_SESSION)){
-        session_start();
-    }
-    unset($_SESSION['user']);
-}
 
-?>
 
 <header>
     <h1>COMICBOOKS</h1>
@@ -32,11 +23,14 @@ $(function () {
         <a href="index.php"><li>Livros</li></a>
         <a href="index.php"><li>Noticias</li></a>
         <?php
+        include_once "protect.php";
         if (!isset($_SESSION)){
             session_start();
         }
-        if(isset($_SESSION['user'])){
-            echo "<a href='?status=logout'><li>Sair</li></a>";
+        if(talogado()){
+            $nick=$_SESSION['user'];
+            echo "<a href='logout.php'><li>Sair</li></a>";
+            echo "<a href='user.php'><li>$nick</li></a>";
         }
         else{
         echo "<a href='cadastro.php'><li>Cadastro</li></a>

@@ -13,6 +13,7 @@
             if (!isset($_SESSION)){
                 session_start();
             }
+            $_SESSION['nivel']=$con['nivel'];//ainda não foi testado
             $_SESSION['user']=$login;
             $vflag=true;
         }else{
