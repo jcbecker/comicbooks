@@ -5,7 +5,10 @@
 	src: url("../fontes/accidental_presiden/accid___.ttf");
 }
 
-
+.erro {
+	color:rgb(255,0,0);
+	
+}
 .fixed {
     position:fixed;
     top:20px;

@@ -1,5 +1,4 @@
 <!doctype html>
-
 <?php
     
     include ("config/conexao.php");
@@ -12,11 +11,13 @@
     if (isset($_POST['entrar'])){
         if($con['id']==$login){
             setcookie("login",$login);
+            $vflag=true;
         }else{
             echo "<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
+            $vflag=false;
         }
         unset ($_POST['senha'],$_POST['login'],$consulta,$con,$senha,$login);
-        if(isset($_COOKIE['login'])){
+        if($vflag){
             header("Location:index.php");
         }
     }

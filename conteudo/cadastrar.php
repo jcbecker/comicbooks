@@ -46,7 +46,7 @@ if (isset($_POST['confirmar'])){
         )";
         $confirma = $mysqli->query($sql_code) or die($mysqli->error);
         if ($confirma){//se a inserção funcionar vou excluir as variaveis
-            unset ($_SESSION['id'],$_SESSION['email'],$_SESSION['senha'],$_SESSION['nome'],$atuallogin,$consulta,$con);//mata tudo mesmo
+            unset ($_SESSION['id'],$_SESSION['email'],$_SESSION['senha'],$_SESSION['nome'],$atuallogin,$consulta,$con,$erro);//mata tudo mesmo
             
         }else{
             $erro[] = "ERRO: Não foi possivel por os valores no banco de dados. ".$confirma;
@@ -59,14 +59,14 @@ if (isset($_POST['confirmar'])){
 ?>
 
 <h1>Cadastrar Usuário</h1>
+<p class="erro">
 <?php 
 if (count($erro)>0){
-    echo "<div class 'erro'>";
     foreach ($erro as $valor) 
         echo "$valor <br>";
-    echo "</div>";
 }
 ?>
+</p>
 <form action="cadastro.php?p=cadastrar" method="POST">
     
     <label for="nome">Nome</label>

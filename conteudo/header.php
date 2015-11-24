@@ -1,3 +1,11 @@
+<?php 
+$status=$_GET['status'];
+if ($status=='logout'){
+    setcookie("login");
+}
+
+?>
+
 <header>
     <h1>COMICBOOKS</h1>
 </header>
@@ -22,7 +30,7 @@ $(function () {
         <a href="index.php"><li>Noticias</li></a>
         <?php
         if(isset($_COOKIE['login'])){
-            echo "<a href='index.php'><li>Sair</li></a>";
+            echo "<a href='?status=logout'><li>Sair</li></a>";
         }
         else{
         echo "<a href='cadastro.php'><li>Cadastro</li></a>
