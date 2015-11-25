@@ -29,7 +29,16 @@ unset ($con['senha']);
             <?php 
             foreach ($con as $chave=>$valor)
                 echo $chave.' = '.$valor.'</br>';
-            
+            if (adminlogado()){
+                echo "
+                <nav>
+                <ul>
+                    <li><a href='usermanager.php'>Gerenciar Leitores</a></li>
+                    <li><a href='user.php'>Postar Obra</a></li>
+                    <li><a href='user.php'>Postar Noticia</a></li>
+                </ul>
+                </nav>";//falta fazer para postar obra e noticia
+            }
             
             ?>
             
@@ -74,7 +83,7 @@ unset ($con['senha']);
                     $_SESSION['email']=$con['email'];
                 }
                 
-                include_once "conteudo/editaruser.php";
+                include "conteudo/editaruser.php";
             }
             
             if ((isset($_POST['deleteuser']))){
