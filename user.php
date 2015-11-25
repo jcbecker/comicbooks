@@ -57,6 +57,14 @@ unset ($con['senha']);
                         <input value="Editar" name="editaruser" type="submit">
                     </form></td>
                 </tr>
+                <tr>
+                    <td><form action="user.php" method="POST">
+                        <input value="Excluir Conta" name="deleteuser" type="submit">
+                    </form></td>
+                </tr>
+                
+                
+                
                 
             </table>
             <?php
@@ -67,6 +75,16 @@ unset ($con['senha']);
                 }
                 
                 include_once "conteudo/editaruser.php";
+            }
+            
+            if ((isset($_POST['deleteuser']))){
+                echo "
+                <script>
+                if(confirm('Deseja realmente fazer isso?')) {
+                    location.href='conteudo/deleteuser.php';
+                } 
+                </script>
+                ";
             }
             
             
