@@ -14,7 +14,7 @@ if (isset($_POST['confirmar'])){
     $atuallogin=$_SESSION['id'];//gambiarra para corrigir aspas triplas na consulta
     $consulta = "SELECT id FROM user where id = '$atuallogin'";
     $con = $mysqli->query($consulta) or die($mysqli->error);
-    $con = $con->fetch_array();
+    $con = $con->fetch_assoc();
     
     if (strlen($_SESSION['nome'])>70){
         $erro[] = "ERRO: Não pode ter mais de 70 carcteres no campo nome.";
@@ -67,7 +67,7 @@ if (count($erro)>0){
 }
 ?>
 </p>
-<form action="cadastro.php?p=cadastrar" method="POST">
+<form action="cadastro.php" method="POST">
     
     <label for="nome">Nome</label>
     <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">

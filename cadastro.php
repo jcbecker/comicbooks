@@ -1,8 +1,7 @@
-<!doctype html>
-
 <?php
 include ("config/conexao.php");//por algum motivo tenq incluir aqui, mesmo incluindo no cadastrar.php
 ?>
+<!doctype html>
 <html>
 <head>
     <title>comicbooks | cadastro</title>
