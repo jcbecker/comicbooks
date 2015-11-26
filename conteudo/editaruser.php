@@ -56,19 +56,32 @@ if (count($erro)>0){
 ?>
 </p>
 <form action="user.php?p=editaruser" method="POST">
-    
-    <label for="nome">Nome</label>
-    <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
-    
-    <label for="email">E-mail</label>
-    <input name="email" value="<?php echo $_SESSION[email];?>" required type="email">
-    
-    <label for="senha">Nova Senha</label>
-    <input name="senha" value="" type="password" required>8~16 caracteres
-    
-    <label for="rsenha">Repita a Senha</label>
-    <input name="rsenha" value="" type="password" required>
-    
-    <input value="Salvar" name="confirmaedit" type="submit">
+    <ul class="form-style-1">
+        
+        <li>
+            <label for="nome">Nome<span class="required">*</span></label>
+            <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
+        </li>
+        
+        <li>
+            <label for="email">E-mail<span class="required">*</span></label>
+            <input name="email" value="<?php echo $_SESSION[email];?>" required type="email">
+        </li>
+        
+        <li>
+            <label for="senha">Nova Senha<span class="required">*</span></label>
+            <input name="senha" value="" type="password" required>8~16 caracteres
+        </li>
+        
+        <li>
+            <label for="rsenha">Repita a Senha<span class="required">*</span></label>
+            <input name="rsenha" value="" type="password" required>
+        </li>
+        
+        <li>
+            <input value="Salvar" name="confirmaedit" type="submit">
+        </li>
+        
+    </ul>
     
 </form>

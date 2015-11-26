@@ -68,22 +68,30 @@ if (count($erro)>0){
 ?>
 </p>
 <form action="cadastro.php" method="POST">
-    
-    <label for="nome">Nome</label>
-    <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
-    
-    <label for="id">ID, login</label>
-    <input name="id" value="<?php echo $_SESSION[id];?>" required type="text">6~30 caracteres
-    
-    <label for="email">E-mail</label>
-    <input name="email" value="<?php echo $_SESSION[email];?>" required type="email">
-    
-    <label for="senha">Senha</label>
-    <input name="senha" value="" required type="password">8~16 caracteres
-    
-    <label for="rsenha">Repita a Senha</label>
-    <input name="rsenha" value="" required type="password">
-    
-    <input value="Salvar" name="confirmar" type="submit">
+    <ul class="form-style-1">
+    <li>
+        <label for="nome">Nome<span class="required">*</span></label>
+        <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text" placeholder="Nome">
+    </li>
+    <li>
+        <label for="id">ID, login<span class="required">*</span></label>
+        <input name="id" value="<?php echo $_SESSION[id];?>" required type="text" placeholder="ID, login">6~30 caracteres
+    </li>
+    <li>
+        <label for="email">E-mail<span class="required">*</span></label>
+        <input name="email" value="<?php echo $_SESSION[email];?>" required type="email" placeholder="E-mail">
+    </li>
+    <li>
+        <label for="senha">Senha<span class="required">*</span></label>
+        <input name="senha" value="" required type="password" placeholder="Senha">8~16 caracteres
+    </li>
+    <li>
+        <label for="rsenha">Repita a Senha<span class="required">*</span></label>
+        <input name="rsenha" value="" required type="password">
+    </li>
+    <li>
+        <input value="Salvar" name="confirmar" type="submit">
+    </li>
+    </ul>
     
 </form>

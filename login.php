@@ -39,10 +39,25 @@
         <div id="content">
             <!--aqui vai todo conteudo do planeta-->
             <form method="POST" action="login.php">
-                <label>Login:</label><input type="text" name="login" id="login"><br>
-                <label>Senha:</label><input type="password" name="senha" id="senha"><br>
-                <input type="submit" value="entrar" id="entrar" name="entrar"><br>
-                <a href="cadastro.php">Cadastre-se</a>
+                <ul class="form-style-1">
+                    <li>
+                        <label>Login</label>
+                        <input type="text" name="login" id="login">
+                    </li>
+                    
+                    <li>
+                        <label>Senha</label>
+                        <input type="password" name="senha" id="senha">
+                    </li>
+                    
+                    <li>
+                        <input type="submit" value="entrar" id="entrar" name="entrar">
+                    </li>
+                    
+                    <li>
+                        <a href="cadastro.php">Cadastre-se</a>
+                    </li>
+                </ul>
             </form>
             
         </div>

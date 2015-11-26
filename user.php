@@ -61,21 +61,21 @@ unset ($con['senha']);
                     <td>Email</td>
                     <td><?php echo $con['email'] ?></td>
                 </tr>
-                <tr>
-                    <td><form action="user.php" method="POST">
+                </table>
+                
+                <form action="user.php" method="POST">
+                    <ul class="form-style-1">
+                        <li>
                         <input value="Editar" name="editaruser" type="submit">
-                    </form></td>
-                </tr>
-                <tr>
-                    <td><form action="user.php" method="POST">
+                        </li>
+                        <li>
                         <input value="Excluir Conta" name="deleteuser" type="submit">
-                    </form></td>
-                </tr>
+                        </li>
+                    </ul>
+                </form>
                 
                 
-                
-                
-            </table>
+            
             <?php
             if ((isset($_POST['editaruser']))||$_GET['p']=='editaruser'){
                 if ((isset($_POST['editaruser']))){

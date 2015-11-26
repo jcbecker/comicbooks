@@ -75,31 +75,46 @@ else{
             </p>
             <!--aqui vai todo conteudo do planeta-->
             <form action="postobra.php" method="POST" enctype="multipart/form-data">
-                <label for="titulo">Titulo:</label>
-                <input name="titulo" required type="text">
-                
-                <label for="autor">Autor(a):</label>
-                <input name="autor" required type="text">
-                
-                <label for="editora">Editora:</label>
-                <input name="editora" required type="text">
-                
-                <label for="tipo">Tipo(hq,livro,manga):</label>
-                <input name="tipo" required type="text">
-                
-                <label for="datal">Data de lançamento(yyyy-mm-dd):</label>
-                <input name="datal" required type="text">
-                
-                
-                <label for="capa">Capa:</label>
-                <input type="file" required name="capa">
-                
-                
-                <label for="pdf">Pdf:</label>
-                <input type="file" required name="pdf">
-                
-                </br>
-                <input type="submit" value="salvarobra" name="salvarobra">
+                <ul class="form-style-1">
+                    <li>
+                        <label for="titulo">Titulo<span class="required">*</span></label>
+                        <input name="titulo" required type="text">
+                    </li>
+                    
+                    <li>
+                        <label for="autor">Autor(a)</label>
+                        <input name="autor" required type="text">
+                    </li>
+                    
+                    <li>
+                        <label for="editora">Editora</label>
+                        <input name="editora" required type="text">
+                    </li>
+                    
+                    <li>
+                        <label for="tipo">Tipo(hq,livro,manga)<span class="required">*</span></label>
+                        <input name="tipo" required type="text">
+                    </li>
+                    
+                    <li>
+                        <label for="datal">Data de lançamento(yyyy-mm-dd)</label>
+                        <input name="datal" required type="text">
+                    </li>
+                    
+                    <li>
+                        <label for="capa">Capa</label>
+                        <input type="file" required name="capa">
+                    </li>
+                    
+                    <li>
+                        <label for="pdf">Pdf<span class="required">*</span></label>
+                        <input type="file" required name="pdf">
+                    </li>
+                        
+                    <li>
+                        <input type="submit" value="salvarobra" name="salvarobra">
+                    </li>
+                </ul>
             </form>
             
         </div>
