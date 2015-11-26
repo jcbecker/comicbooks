@@ -52,15 +52,15 @@ $linha=$sql_query->fetch_assoc();
             
             
             ?>
-            
-            <table>
+            <h1>Lista de Todos Cadastrados</h1>
+            <table id="userslist">
                 <tr>
-                    <td>ID/Login</td>
-                    <td>Nome</td>
-                    <td>Email</td>
-                    <td>Nivel</td>
-                    <td>InviteAdmin</td>
-                    <td>Excluir</td>    
+                    <th>ID/Login</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Nivel</th>
+                    <th>toAdm</th>
+                    <th>Excluir</th>    
                 </tr>
                 <?php 
                 do{
@@ -71,10 +71,10 @@ $linha=$sql_query->fetch_assoc();
                     if ($linha['nivel']==2) echo "<td>Admin</td>";
                     else echo "<td>Leitor</td>";
                     echo "
-                    <td><form method='post' action='usermanager.php'><input type='submit' name='$linha[id]' value='invit' /></form></td>
+                    <td><form method='post' action='usermanager.php'><input type='submit' name='$linha[id]' value='invit'></form></td>
                     ";
                     echo "
-                    <td><form method='post' action='usermanager.php'><input type='submit' name='$linha[id]' value='delete' /></form></td>
+                    <td><form method='post' action='usermanager.php'><input type='submit' name='$linha[id]' value='delete'></form></td>
                     ";
                     echo "</tr>";
                     
