@@ -10,7 +10,12 @@ if ($sql_query){
 $linha=$sql_query->fetch_assoc();
 $capap="upload/obra/capa/";
 $pdfp="upload/obra/pdf/";
-
+include "conteudo/obra.php";
+do{
+    $obras[]= new Obra ($linha['id'],$linha['titulo'],$linha['autor'],$linha['editora'],$linha['datal'],$linha['datap'],$linha['tipo'],$linha['pdf'],$linha['capa']);
+    
+}while($linha=$sql_query->fetch_assoc());
+$quantidade=count($obras);
 ?>
 
 
@@ -28,17 +33,17 @@ $pdfp="upload/obra/pdf/";
         <div id="content">
             <!--aqui vai todo conteudo do planeta-->
             
-            <?php 
-            do{?>
+            <?php
+            foreach($obras as $obra){?>
                 <article class="obra">
                     <table>
-                        <tr><td rowspan="7"><img src="<?php echo $capap.$linha['capa']; ?>"/></td><td>Titulo:<?php echo $linha['titulo']; ?></td></tr>
-                        <tr><td>Autor:<?php echo $linha['autor']; ?></td></tr>
-                        <tr><td>Editora:<?php echo $linha['editora']; ?></td></tr>
-                        <tr><td>Lançamento:<?php echo $linha['datal']; ?></td></tr>
-                        <tr><td>Postado:<?php echo $linha['datap']; ?></td></tr>
-                        <tr><td>Tipo:<?php echo $linha['tipo']; ?></td></tr>
-                        <tr><td><a href="<?php echo $pdfp.$linha['pdf']; ?>" target="_blank">Abrir PDF</a></td></tr>
+                        <tr><td rowspan="7"><img src="<?php echo $capap.$obra->capa; ?>"/></td><td>Titulo:<?php echo $obra->titulo; ?></td></tr>
+                        <tr><td>Autor:<?php echo $obra->autor; ?></td></tr>
+                        <tr><td>Editora:<?php echo $obra->editora; ?></td></tr>
+                        <tr><td>Lançamento:<?php echo $obra->datal; ?></td></tr>
+                        <tr><td>Postado:<?php echo $obra->datap; ?></td></tr>
+                        <tr><td>Tipo:<?php echo $obra->tipo; ?></td></tr>
+                        <tr><td><a href="<?php echo $pdfp.$obra->pdf; ?>" target="_blank">Abrir PDF</a></td></tr>
                         
                         
                     </table>

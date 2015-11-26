@@ -87,7 +87,7 @@ else{
                 <label for="tipo">Tipo(hq,livro,manga):</label>
                 <input name="tipo" required type="text">
                 
-                <label for="datal">Data de lançamento:</label>
+                <label for="datal">Data de lançamento(yyyy-mm-dd):</label>
                 <input name="datal" required type="text">
                 
                 
