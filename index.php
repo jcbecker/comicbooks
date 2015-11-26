@@ -1,3 +1,19 @@
+<?php
+include ("config/conexao.php");
+$sql_code = "SELECT * FROM obra";
+$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+if ($sql_query){
+    $flag="sucesso";
+}else{
+    $flag="erro ao conectar ao banco de dados";
+}
+$linha=$sql_query->fetch_assoc();
+$capap="upload/obra/capa/";
+$pdfp="upload/obra/pdf/";
+
+?>
+
+
 <!doctype html>
 
 <html>
@@ -11,94 +27,25 @@
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
             <!--aqui vai todo conteudo do planeta-->
-            <p>
-                There's a blackbird perched outside my window</br>
-                I hear him calling</br>
-                I hear him sing</br>
-                He burns me with his eyes of gold to embers</br>
-                He sees all my sins</br>
-                He reads my soul</br>
-                One day that bird, he spoke to me</br>
-                Like Martin Luther</br>
-                Like Pericles</br>
-                </br>
-                Come join the murder</br>
-                Come fly with black</br>
-                We'll give you freedom</br>
-                From the human trap</br>
-                Come join the murder</br>
-                Soar on my wings</br>
-                You'll touch the hand of God</br>
-                And He'll make you king</br>
-                And He'll make you king</br>
-                </br>
-                On a blanket made of woven shadows</br>
-                Flew up to heaven</br>
-                On a raven's glide</br>
-                These angels have turned my wings to wax now</br>
-                I fell like Judas from grace tonight</br>
-                On that day that he lied to me</br>
-                Like Martin Luther</br>
-                Like Pericles</br>
-                </br>
-                Come join the murder</br>
-                Come fly with black</br>
-                We'll give you freedom</br>
-                From the human trap</br>
-                Come join the murder</br>
-                Soar on my wings</br>
-                You'll touch the hand of God</br>
-                And He'll make you king</br>
-                And He'll make you king</br>
-                </br>
-                I walk among the children of my fathers</br>
-                The broken wings, betrayal's cost</br>
-                They call to me but never touch my heart, no</br>
-                I am too far</br>
-                I'm too lost</br>
-                </br>
-                All I can hear is what he spoke to me</br>
-                Like Martin Luther</br>
-                Like Pericles</br>
-                Come join the murder</br>
-                Come fly with black</br>
-                We'll give you freedom</br>
-                From the human trap</br>
-                Come join the murder</br>
-                Soar on my wings</br>
-                You'll touch the hand of God</br>
-                And He'll make you king</br>
-                And He'll make you king</br>
-                </br>
-                So now I curse that raven's fire</br>
-                You made me hate, you made me burn</br>
-                He laughed aloud as he flew from Eden</br>
-                You always knew, you never learn</br>
-                The crow no longer sings to me</br>
-                Like Martin Luther</br>
-                Or Pericles</br>
-                </br>
-                Come join the murder</br>
-                Come fly with black</br>
-                We'll give you freedom</br>
-                From the human trap</br>
-                Come join the murder</br>
-                Soar on my wings</br>
-                You'll touch the hand of God</br>
-                And He'll make you king</br>
-                And He'll make you king</br>
-                </br>
-                Come join the murder</br>
-                Come fly with black</br>
-                We'll give you freedom</br>
-                From the human trap</br>
-                Come join the murder</br>
-                Soar on my wings</br>
-                You'll touch the hand of God</br>
-                And He'll make you king</br>
-                And He'll make you king</br>
-
-            </p>
+            
+            <?php 
+            do{?>
+                <article class="obra">
+                    <table>
+                        <tr><td rowspan="7"><img src="<?php echo $capap.$linha['capa']; ?>"/></td><td>Titulo:<?php echo $linha['titulo']; ?></td></tr>
+                        <tr><td>Autor:<?php echo $linha['autor']; ?></td></tr>
+                        <tr><td>Editora:<?php echo $linha['editora']; ?></td></tr>
+                        <tr><td>Lançamento:<?php echo $linha['datal']; ?></td></tr>
+                        <tr><td>Postado:<?php echo $linha['datap']; ?></td></tr>
+                        <tr><td>Tipo:<?php echo $linha['tipo']; ?></td></tr>
+                        <tr><td><a href="<?php echo $pdfp.$linha['pdf']; ?>" target="_blank">Abrir PDF</a></td></tr>
+                        
+                        
+                    </table>
+                    
+                </article>    
+            <?php }while($linha=$sql_query->fetch_assoc());?>
+            
             
         </div>
         
