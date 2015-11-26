@@ -76,6 +76,7 @@ nav#menutop h1{
 }
 div#content{
     background-color:rgb(255,255,255);
+	padding:10px;
 }
 footer{
     border-top:1px solid black;
@@ -95,7 +96,27 @@ input{
     font-size:16px;
     padding:5px;
 }
-
+article.obra{
+	margin:10px 0px 20px 0px;
+}
+article.obra td{
+	border-bottom:1px solid rgb(150,150,150);
+}
+article.obra table{
+	border:1px solid rgb(150,150,150);
+	
+}article.obra img{
+	width:200px;
+}
+article.obra a{
+	background-color:rgb(176,196,222);
+    color:rgb(50,50,50);
+    text-decoration:none;
+    padding:10px;
+}article.obra a:hover{
+	color:rgb(0,0,0);
+    background-color:rgb(186,216,232);
+}
 
 /*
 div#interface{

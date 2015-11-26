@@ -37,7 +37,7 @@ $quantidade=count($obras);
             foreach($obras as $obra){?>
                 <article class="obra">
                     <table>
-                        <tr><td rowspan="7"><img src="<?php echo $capap.$obra->capa; ?>"/></td><td>Titulo:<?php echo $obra->titulo; ?></td></tr>
+                        <tr><td rowspan="7"><img src="<?php echo $capap.$obra->capa; ?>"/></td><td>Título:<?php echo $obra->titulo; ?></td></tr>
                         <tr><td>Autor:<?php echo $obra->autor; ?></td></tr>
                         <tr><td>Editora:<?php echo $obra->editora; ?></td></tr>
                         <tr><td>Lançamento:<?php echo $obra->datal; ?></td></tr>
