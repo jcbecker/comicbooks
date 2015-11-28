@@ -64,7 +64,7 @@ $quantidade=count($obras);
                         oi
                     </div>
                 </article>    
-            <?php }while($linha=$sql_query->fetch_assoc());?>
+            <?php }?>
             
             
         </div>
