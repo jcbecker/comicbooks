@@ -114,7 +114,15 @@ article.obra a{
 	color:rgb(0,0,0);
     background-color:rgb(186,216,232);
 }
-
+.botaopadrao {
+	background-color:rgb(176,196,222);
+    color:rgb(50,50,50);
+    text-decoration:none;
+    padding:10px;
+}.botaopadrao :hover{
+	color:rgb(0,0,0);
+	background-color:rgb(186,216,232);
+}
 
 
 
