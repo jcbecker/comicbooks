@@ -71,19 +71,19 @@ if (count($erro)>0){
     <ul class="form-style-1">
     <li>
         <label for="nome">Nome<span class="required">*</span></label>
-        <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text" placeholder="Nome">
+        <input name="nome" value="<?php echo $_SESSION[nome];?>" required type="text">
     </li>
     <li>
         <label for="id">ID, login<span class="required">*</span></label>
-        <input name="id" value="<?php echo $_SESSION[id];?>" required type="text" placeholder="ID, login">6~30 caracteres
+        <input name="id" value="<?php echo $_SESSION[id];?>" required type="text">6~30 caracteres
     </li>
     <li>
         <label for="email">E-mail<span class="required">*</span></label>
-        <input name="email" value="<?php echo $_SESSION[email];?>" required type="email" placeholder="E-mail">
+        <input name="email" value="<?php echo $_SESSION[email];?>" required type="email">
     </li>
     <li>
         <label for="senha">Senha<span class="required">*</span></label>
-        <input name="senha" value="" required type="password" placeholder="Senha">8~16 caracteres
+        <input name="senha" value="" required type="password">8~16 caracteres
     </li>
     <li>
         <label for="rsenha">Repita a Senha<span class="required">*</span></label>
