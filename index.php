@@ -52,6 +52,14 @@ foreach($obras as $obra){
         document.getElementById(el).style.display = 'none';
     }
     
+    function contarCaracteres(box,valor,campospan,myself){
+	    var conta = valor - box.length;
+	    document.getElementById(campospan).innerHTML = "Você ainda pode digitar " + conta + " caracteres";
+	    if(box.length >= valor){
+		    document.getElementById(campospan).innerHTML = "Opss.. você não pode mais digitar..";
+		    document.getElementById(myself).value = document.getElementById(myself).value.substr(0,valor);
+	    }	
+    }
     </script>
 </head>
 <body>
@@ -86,10 +94,19 @@ foreach($obras as $obra){
                             }
                         }
                         
-                        if (talogado()){
-                            echo "pode comentar";
-                            
-                        }else{
+                        if (talogado()){ ?>
+                            <form>
+                                <ul class="form-style-1">
+                                    <li>
+                                        <textarea cols="45" id="campo<?php echo $obra->id;?>" rows="5" onkeyup="contarCaracteres(this.value,140,'sprestante<?php echo $obra->id;?>','campo<?php echo $obra->id;?>')"></textarea>
+                                    </li>
+                                    <li><span id="sprestante<?php echo $obra->id;?>" style="font-family:Georgia;"></span></li>
+                                    <li>
+                                        <input type="submit" value="comentar" name="enviacomentario">
+                                    </li>
+                                </ul>
+                            </form>
+                        <?php }else{
                             echo "você precisa estar logado para comentar";
                         }?>
                     </div>
