@@ -1,6 +1,7 @@
 <?php
+include_once "protect.php";
 include ("config/conexao.php");
-$sql_code = "SELECT * FROM obra";
+$sql_code = "SELECT * FROM obra ORDER BY datap desc";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 if ($sql_query){
     $flag="sucesso";
@@ -16,6 +17,22 @@ do{
     
 }while($linha=$sql_query->fetch_assoc());
 $quantidade=count($obras);
+
+include "conteudo/comentario.php";
+foreach($obras as $obra){
+    $sql_code = "SELECT * FROM ocomentario WHERE obra='$obra->id' ORDER BY horario asc";
+    $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+    $linha=$sql_query->fetch_assoc();
+    do{
+        $comment[]= new Comentario($linha['user'],$linha['obra'],$linha['horario'],$linha['texto']);
+        
+    }while($linha=$sql_query->fetch_assoc());
+    
+    
+    
+}
+
+
 ?>
 
 
@@ -60,8 +77,21 @@ $quantidade=count($obras);
                         
                     </table>
                     
-                    <div id="coment<?php echo $obra->id;?>" style="display:none;">
-                        oi
+                    <div id="coment<?php echo $obra->id;?>" style="display:none;" class="comentario">
+                        <?php foreach($comment as $comentario){
+                            if($comentario->obra==$obra->id){
+                                echo "$comentario->user</br>";
+                                echo "$comentario->texto</br>";
+                                echo "$comentario->horario</br>";
+                            }
+                        }
+                        
+                        if (talogado()){
+                            echo "pode comentar";
+                            
+                        }else{
+                            echo "você precisa estar logado para comentar";
+                        }?>
                     </div>
                 </article>    
             <?php }?>
