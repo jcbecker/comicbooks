@@ -1,12 +1,25 @@
 <?php
 include_once "protect.php";
 include ("config/conexao.php");
+
+if (isset($_POST['enviacomentario'])){
+    $sql_code = "INSERT INTO ocomentario (user, obra, horario, texto)
+    VALUES ('$_POST[iduser]','$_POST[idobra]',NOW(),'$_POST[texto]')";
+    $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+    if (!$sql_query){
+        $flag=false;
+    }
+    
+}
+
+
+
 $sql_code = "SELECT * FROM obra ORDER BY datap desc";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 if ($sql_query){
-    $flag="sucesso";
+//    $flag="sucesso";
 }else{
-    $flag="erro ao conectar ao banco de dados";
+    $flag=false;
 }
 $linha=$sql_query->fetch_assoc();
 $capap="upload/obra/capa/";
@@ -22,6 +35,9 @@ include "conteudo/comentario.php";
 foreach($obras as $obra){
     $sql_code = "SELECT * FROM ocomentario WHERE obra='$obra->id' ORDER BY horario asc";
     $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+    if (!$sql_query){
+        $flag=false;
+    }
     $linha=$sql_query->fetch_assoc();
     do{
         $comment[]= new Comentario($linha['user'],$linha['obra'],$linha['horario'],$linha['texto']);
@@ -95,12 +111,14 @@ foreach($obras as $obra){
                         }
                         
                         if (talogado()){ ?>
-                            <form>
+                            <form action="index.php" method="post" >
                                 <ul class="form-style-1">
                                     <li>
-                                        <textarea cols="45" id="campo<?php echo $obra->id;?>" rows="5" onkeyup="contarCaracteres(this.value,140,'sprestante<?php echo $obra->id;?>','campo<?php echo $obra->id;?>')"></textarea>
+                                        <textarea name="texto" cols="45" id="campo<?php echo $obra->id;?>" rows="5" onkeyup="contarCaracteres(this.value,140,'sprestante<?php echo $obra->id;?>','campo<?php echo $obra->id;?>')"></textarea>
                                     </li>
                                     <li><span id="sprestante<?php echo $obra->id;?>" style="font-family:Georgia;"></span></li>
+                                    <input type="hidden" name="idobra" value="<?php echo $obra->id; ?>" />
+                                    <input type="hidden" name="iduser" value="<?php echo $_SESSION['user']; ?>" />
                                     <li>
                                         <input type="submit" value="comentar" name="enviacomentario">
                                     </li>
