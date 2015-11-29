@@ -74,12 +74,12 @@ foreach($obras as $obra){
             foreach($obras as $obra){?>
                 <article class="obra">
                     <table>
-                        <tr><td rowspan="7"><img src="<?php echo $capap.$obra->capa; ?>"/></td><td>Título:<?php echo $obra->titulo; ?></td></tr>
+                        <tr><td rowspan="6"><img src="<?php echo $capap.$obra->capa; ?>"/></td><td>Título:<?php echo $obra->titulo; ?></td></tr>
                         <tr><td>Autor:<?php echo $obra->autor; ?></td></tr>
                         <tr><td>Editora:<?php echo $obra->editora; ?></td></tr>
                         <tr><td>Lançamento:<?php echo $obra->datal; ?></td></tr>
                         <tr><td><?php echo $obra->datap; ?></td></tr>
-                        <tr><td>Tipo:<?php echo $obra->tipo; ?></td></tr>
+                        
                         <tr><td><a href="<?php echo $pdfp.$obra->pdf; ?>" target="_blank">Abrir PDF</a>
                                 <a onclick="Mudarestado('coment<?php echo $obra->id;?>')" >Comentarios</a>
                         </td></tr>
