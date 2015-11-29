@@ -47,6 +47,7 @@ if (isset($_POST['confirmar'])){
         $confirma = $mysqli->query($sql_code) or die($mysqli->error);
         if ($confirma){//se a inserção funcionar vou excluir as variaveis
             unset ($_SESSION['id'],$_SESSION['email'],$_SESSION['senha'],$_SESSION['nome'],$atuallogin,$consulta,$con,$erro);//mata tudo mesmo
+            header("Location:login.php");
             
         }else{
             $erro[] = "ERRO: Não foi possivel por os valores no banco de dados. ".$confirma;
