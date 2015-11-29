@@ -33,14 +33,14 @@ $quantidade=count($obras);
 
 include "conteudo/comentario.php";
 foreach($obras as $obra){
-    $sql_code = "SELECT * FROM ocomentario WHERE obra='$obra->id' ORDER BY horario asc";
+    $sql_code = "SELECT nome, obra, horario, texto  FROM ocomentario JOIN user ON id=user WHERE obra='$obra->id' ORDER BY horario asc";
     $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
     if (!$sql_query){
         $flag=false;
     }
     $linha=$sql_query->fetch_assoc();
     do{
-        $comment[]= new Comentario($linha['user'],$linha['obra'],$linha['horario'],$linha['texto']);
+        $comment[]= new Comentario($linha['nome'],$linha['obra'],$linha['horario'],$linha['texto']);
         
     }while($linha=$sql_query->fetch_assoc());
     
