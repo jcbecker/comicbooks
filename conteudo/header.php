@@ -21,7 +21,7 @@ $(function () {
         <a href="index.php"><li>Home</li></a>
         <a href="hqs.php"><li>HQs</li></a>
         <a href="livros.php"><li>Livros</li></a>
-        <a href="index.php"><li>Notícias</li></a>
+        <a href="noticias.php"><li>Notícias</li></a>
         <?php
         include_once "protect.php";
         if (!isset($_SESSION)){

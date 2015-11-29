@@ -317,3 +317,27 @@ nav.outromenu a:hover{
 nav.outromenu h1{
     display:none;
 }
+
+
+
+article.news {
+	padding:5px;
+	margin:10px auto;
+	font: 15px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	width:80%;
+	min-width:370px;
+	border-bottom:3px solid rgb(0,128,128);
+	
+}article.news h2{
+	font: 22px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:rgb(0,128,128);
+	text-align:center;
+	
+}article.news img{
+	margin:5px;
+	max-width:300px;
+	float:left;
+}article.news p{
+	margin:1px;
+	text-align:justify;
+}
