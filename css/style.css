@@ -117,7 +117,13 @@ article.obra a{
 .comentario{
 	border-bottom:1px solid rgb(150,150,150);
 }
-
+div.thecomentario{
+	margin:0px 0px 4px 0px;
+	border:1px solid rgb(0,139,139);
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}div.thecomentario :hover{
+	border-left:3px solid rgb(0,139,139);
+}
 
 
 table#userslist {

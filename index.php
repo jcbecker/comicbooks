@@ -104,9 +104,9 @@ foreach($obras as $obra){
                     <div id="coment<?php echo $obra->id;?>" style="display:none;" class="comentario">
                         <?php foreach($comment as $comentario){
                             if($comentario->obra==$obra->id){
-                                echo "$comentario->user</br>";
-                                echo "$comentario->texto</br>";
-                                echo "$comentario->horario</br>";
+                                echo "<div class='thecomentario'><p class='username'><pre>$comentario->user</pre></p>";
+                                echo "<p class='txtcomentario'><pre>$comentario->texto</pre></p>";
+                                echo "<p class='timecomentario'>$comentario->horario</p></div>";
                             }
                         }
                         
