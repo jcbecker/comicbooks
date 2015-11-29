@@ -128,7 +128,10 @@ foreach($obras as $obra){
                                 </ul>
                             </form>
                         <?php }else{
-                            echo "você precisa estar logado para comentar";
+                            echo "<div class='thecomentario'><p class='txtcomentario'>
+                            você precisa estar logado para comentar
+                            <a href='login.php'>Login</a>
+                            <a href='cadastro.php'>Cadastrar</a></p></div>";
                         }?>
                     </div>
                 </article>    
