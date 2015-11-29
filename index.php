@@ -58,6 +58,8 @@ foreach($obras as $obra){
 <head>
     <title>comicbooks | home</title>
     <meta charset = "utf-8"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script>
     function Mudarestado(el) {
@@ -104,8 +106,8 @@ foreach($obras as $obra){
                     <div id="coment<?php echo $obra->id;?>" style="display:none;" class="comentario">
                         <?php foreach($comment as $comentario){
                             if($comentario->obra==$obra->id){
-                                echo "<div class='thecomentario'><p class='username'><pre>$comentario->user</pre></p>";
-                                echo "<p class='txtcomentario'><pre>$comentario->texto</pre></p>";
+                                echo "<div class='thecomentario'><p class='username'>$comentario->user</p>";
+                                echo "<p class='txtcomentario'>$comentario->texto </p>";
                                 echo "<p class='timecomentario'>$comentario->horario</p></div>";
                             }
                         }
