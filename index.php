@@ -61,24 +61,7 @@ foreach($obras as $obra){
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script>
-    function Mudarestado(el) {
-    var display = document.getElementById(el).style.display;
-    if(display == "none")
-        document.getElementById(el).style.display = 'block';
-    else
-        document.getElementById(el).style.display = 'none';
-    }
-    
-    function contarCaracteres(box,valor,campospan,myself){
-	    var conta = valor - box.length;
-	    document.getElementById(campospan).innerHTML = "Você ainda pode digitar " + conta + " caracteres";
-	    if(box.length >= valor){
-		    document.getElementById(campospan).innerHTML = "Opss.. você não pode mais digitar..";
-		    document.getElementById(myself).value = document.getElementById(myself).value.substr(0,valor);
-	    }	
-    }
-    </script>
+    <script language="JavaScript" src="js/fjs.js"></script>
 </head>
 <body>
     <div id="main">
