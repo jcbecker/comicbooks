@@ -7,16 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 .erro {
 	color:rgb(255,0,0);
 	
@@ -29,12 +19,21 @@
     width:70%;
 }
 
+html{
+	background-image: url("../figures/bg5.jpg");
+	-webkit-background-size: cover;  
+    -moz-background-size: cover;  
+    -o-background-size: cover;  
+    background-size: cover;
+	background-attachment:fixed;
+}
+
 body{
-    background-image: url("../figures/background.jpg");
     padding:0px;
     font-family:Arial;/*devine arial como fonte para tudo mas certas coisas não vão ser arial(eu acho por hora)*/
     font-size:18px;
     margin:0;
+	min-width: 530px;
 }
 div#main{/*main é a classe princiál que engloba todas as outras*/
     background-color:rgba(250,250,250,0);
@@ -44,7 +43,7 @@ div#main{/*main é a classe princiál que engloba todas as outras*/
 	min-width: 500px;
 	
 	
-	-moz-hyphens:auto;  
+	-moz-hyphens:auto;  /*referencia de conteudo responsivo  http://www.betomarques.com/artigos/artigo_015.php*/
 	-ms-hyphens:auto;  
 	-webkit-hyphens:auto;  
 	hyphens:auto;  
@@ -99,6 +98,14 @@ nav#menutop h1{
 div#content{
     background-color:rgb(255,255,255);
 	padding:10px;
+	border-left:1px solid black;
+	border-right:1px solid black;
+}
+div#content h1{
+    font-weight:normal;
+    text-align:center;
+    letter-spacing:5px;
+    font-size:50px;
 }
 footer{
     border-top:1px solid black;
@@ -123,6 +130,7 @@ article.obra td{
 	border-bottom:1px solid rgb(150,150,150);
 }
 article.obra table{
+	width:480px;
 	border:1px solid rgb(150,150,150);
 	
 }article.obra img{
@@ -143,18 +151,32 @@ article.obra a{
 	width:470px;
 }
 div.thecomentario{
+	padding:3px;
 	margin:0px 0px 4px 0px;
 	border:1px solid rgb(0,139,139);
 	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}div.thecomentario :hover{
-	border-left:3px solid rgb(0,139,139);
 }.timecomentario{
-	color:rgb(0,0,255);
+	color:rgb(0,191,255);
+	text-align: right;
+}.username{
+	color:rgb(0,128,128);
+	font-weight: bold;
 }
 
 
-table#userslist {
+table#myinfos{
+	margin:0 auto;
+	
+}table#myinfos td{
+	border-left:1px solid gray;
+	border-top:1px solid gray;
+}table#myinfos tr:hover{
+	background-color:rgb(200,200,200);
+	
+}
 
+table#userslist {
+	margin:0 auto;
 	
 }table#userslist th{
 	border-bottom:1px solid black;
@@ -171,7 +193,9 @@ table#userslist {
 table#userslist tr:nth-child(odd) {
   background-color: rgb(245,245,245);
 }
-
+table#userslist tr:hover {
+  background-color: rgb(255,99,71);
+}
 
 /*referencia http://www.sanwebe.com/2014/08/css-html-forms-designs*/
 
@@ -260,4 +284,36 @@ select{
 }
 .form-style-1 .required{
     color:red;
+}
+
+
+
+nav.outromenu{
+    text-align: center;
+    display:block;
+    margin:0px 0px 0px 0px;/*mais uma vez esse -40 esta me incomodando*/
+}
+nav.outromenu ul{
+    list-style:none;
+    top:0px;
+    right:0px;
+    background-color:rgb(176,196,222);
+    padding:5px;
+}
+nav.outromenu li{
+    display:inline-block;
+    padding:3px;
+    margin:1px;    
+}
+nav.outromenu a{
+    color:rgb(50,50,50);
+    text-decoration:none;
+    padding:10px;
+}
+nav.outromenu a:hover{
+    color:rgb(0,0,0);
+    background-color:rgb(186,216,232);
+}
+nav.outromenu h1{
+    display:none;
 }

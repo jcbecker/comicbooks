@@ -54,6 +54,7 @@ else{
     <div id="main">
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
+            <h1>Postar Obra</h1>
             <p class="erro">
             <?php 
             if (count($erro)>0){

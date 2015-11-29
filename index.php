@@ -84,6 +84,7 @@ foreach($obras as $obra){
     <div id="main">
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
+            <h1>Ultimas Obras postadas</h1>
             <!--aqui vai todo conteudo do planeta-->
             
             <?php
@@ -94,7 +95,7 @@ foreach($obras as $obra){
                         <tr><td>Autor:<?php echo $obra->autor; ?></td></tr>
                         <tr><td>Editora:<?php echo $obra->editora; ?></td></tr>
                         <tr><td>Lançamento:<?php echo $obra->datal; ?></td></tr>
-                        <tr><td>Postado:<?php echo $obra->datap; ?></td></tr>
+                        <tr><td><?php echo $obra->datap; ?></td></tr>
                         <tr><td>Tipo:<?php echo $obra->tipo; ?></td></tr>
                         <tr><td><a href="<?php echo $pdfp.$obra->pdf; ?>" target="_blank">Abrir PDF</a>
                                 <a onclick="Mudarestado('coment<?php echo $obra->id;?>')" >Comentarios</a>

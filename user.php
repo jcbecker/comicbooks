@@ -27,11 +27,10 @@ unset ($con['senha']);
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
             <?php 
-            foreach ($con as $chave=>$valor)
-                echo $chave.' = '.$valor.'</br>';
+            
             if (adminlogado()){
                 echo "
-                <nav>
+                <nav class='outromenu'>
                 <ul>
                     <li><a href='usermanager.php'>Gerenciar Leitores</a></li>
                     <li><a href='postobra.php'>Postar Obra</a></li>
@@ -43,8 +42,8 @@ unset ($con['senha']);
             ?>
             
             <h1>Minhas Informações</h1>
-            <table>
-                <caption>titulo tabela</caption>
+            <table id="myinfos">
+                
                 <tr>
                     <td>Tipo de Conta</td>
                     <td><?php echo $conta ?></td>
