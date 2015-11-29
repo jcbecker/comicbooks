@@ -19,7 +19,7 @@ $(function () {
 <nav id="menutop">
     <ul>
         <a href="index.php"><li>Home</li></a>
-        <a href="index.php"><li>HQs</li></a>
+        <a href="hqs.php"><li>HQs</li></a>
         <a href="index.php"><li>Livros</li></a>
         <a href="index.php"><li>Notícias</li></a>
         <?php
