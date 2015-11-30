@@ -34,7 +34,7 @@ unset ($con['senha']);
                 <ul>
                     <li><a href='usermanager.php'>Gerenciar Leitores</a></li>
                     <li><a href='postobra.php'>Postar Obra</a></li>
-                    <li><a href='user.php'>Postar Noticia</a></li>
+                    
                 </ul>
                 </nav>";//falta fazer para postar obra e noticia
             }

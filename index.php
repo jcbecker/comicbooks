@@ -11,6 +11,30 @@ if (isset($_POST['enviacomentario'])){
     }
     
 }
+$sql_code = "SELECT tipo, COUNT(tipo) FROM obra GROUP BY tipo";
+$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+$linha=$sql_query->fetch_assoc();
+do{
+    $tipos[$linha['tipo']]=$linha['COUNT(tipo)'];
+}while($linha=$sql_query->fetch_assoc());
+
+$sql_code = "SELECT autor, COUNT(autor) FROM obra GROUP BY autor";
+$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+$linha=$sql_query->fetch_assoc();
+do{
+    $autores[$linha['autor']]=$linha['COUNT(autor)'];
+}while($linha=$sql_query->fetch_assoc());
+
+
+$sql_code = "SELECT editora, COUNT(editora) FROM obra GROUP BY editora";
+$sql_query = $mysqli->query($sql_code) or die($mysqli->error);
+$linha=$sql_query->fetch_assoc();
+do{
+    $editores[$linha['editora']]=$linha['COUNT(editora)'];
+}while($linha=$sql_query->fetch_assoc());
+
+
+
 
 
 
@@ -67,6 +91,25 @@ foreach($obras as $obra){
     <div id="main">
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
+            <?php
+            /*
+            foreach($tipos as $chave=>$valor){
+                echo "$chave $valor <br>";
+            }
+            
+            foreach($autores as $chave=>$valor){
+                echo "$chave $valor <br>";
+            }
+            
+            foreach($editores as $chave=>$valor){
+                echo "$chave $valor <br>";
+            }
+            */
+            
+            
+            
+            
+             ?>
             <h1>Ultimas Obras postadas</h1>
             <!--aqui vai todo conteudo do planeta-->
             
