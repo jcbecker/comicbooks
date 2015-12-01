@@ -11,7 +11,7 @@ $var--;
 
 ?>
 <!doctype html>
-<html>
+<html  lang="pt-br">
 <head>
     <title>comicbooks | Notícias</title>
     <meta charset = "utf-8"/>

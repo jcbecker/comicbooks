@@ -26,7 +26,7 @@
     }
 ?>
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
     <title>comicbooks | Login</title>
     <meta charset = "utf-8"/>

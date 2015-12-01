@@ -2,7 +2,7 @@
 include ("config/conexao.php");//por algum motivo tenq incluir aqui, mesmo incluindo no cadastrar.php
 ?>
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
     <title>comicbooks | cadastro</title>
     <meta charset = "utf-8"/>

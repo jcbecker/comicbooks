@@ -4,6 +4,8 @@
     <h1>COMICBOOKS</h1>
 </header>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<!--o trexo abaixo é uma função ajax que faz o menu bater no topo quando o usuario rola a página para baixo
+e faz voltar á sua posição quando a área aparece na tela-->
 <script type="text/javascript">
 $(function () {
     var topo = $('#menutop').offset().top;

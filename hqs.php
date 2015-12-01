@@ -54,7 +54,7 @@ foreach($obras as $obra){
 
 <!doctype html>
 
-<html>
+<html lang="pt-br">
 <head>
     <title>comicbooks | HQs</title>
     <meta charset = "utf-8"/>

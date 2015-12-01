@@ -44,7 +44,7 @@ else{
 ?>
 <!doctype html>
 
-<html>
+<html lang="pt-br">
 <head>
     <title>comicbooks | Postagem de Obra</title>
     <meta charset = "utf-8"/>

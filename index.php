@@ -1,7 +1,7 @@
 <?php
 include_once "protect.php";
 include ("config/conexao.php");
-
+/*grava comentario no banco de dados*/
 if (isset($_POST['enviacomentario'])){
     $sql_code = "INSERT INTO ocomentario (user, obra, horario, texto)
     VALUES ('$_POST[iduser]','$_POST[idobra]',NOW(),'$_POST[texto]')";
@@ -11,6 +11,8 @@ if (isset($_POST['enviacomentario'])){
     }
     
 }
+/*as proximas linhas carregam do banco agrupamento de obras por tipo autor e editora
+esses valores não são usados, mas seriam se desse tempo de implementar um filtro de pesquisa para obra*/
 $sql_code = "SELECT tipo, COUNT(tipo) FROM obra GROUP BY tipo";
 $sql_query = $mysqli->query($sql_code) or die($mysqli->error);
 $linha=$sql_query->fetch_assoc();
@@ -78,7 +80,7 @@ foreach($obras as $obra){
 
 <!doctype html>
 
-<html>
+<html lang="pt-br">
 <head>
     <title>comicbooks | home</title>
     <meta charset = "utf-8"/>

@@ -1,4 +1,5 @@
 <?php 
+/*faz proteção para quem não ta logado*/
 include_once "protect.php";
 protect();
 if(adminlogado()){
@@ -6,6 +7,7 @@ if(adminlogado()){
 }else{
     $conta="Leitor";
 }
+/*carrega informações do usuario no banco*/
 $login=$_SESSION['user'];
 include ("config/conexao.php");
 $consulta = "SELECT * FROM user where id = '$login'";
@@ -16,7 +18,7 @@ unset ($con['senha']);
 ?>
 <!doctype html>
 
-<html>
+<html lnag"pt-br">
 <head>
     <title>comicbooks | User</title>
     <meta charset = "utf-8"/>
@@ -27,7 +29,7 @@ unset ($con['senha']);
         <?php include_once "conteudo/header.php"; ?>
         <div id="content">
             <?php 
-            
+            /*mostra conteudo apenas se um admin for logado*/
             if (adminlogado()){
                 echo "
                 <nav class='outromenu'>
@@ -36,7 +38,7 @@ unset ($con['senha']);
                     <li><a href='postobra.php'>Postar Obra</a></li>
                     
                 </ul>
-                </nav>";//falta fazer para postar obra e noticia
+                </nav>";
             }
             
             ?>
